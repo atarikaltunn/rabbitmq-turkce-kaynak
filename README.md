@@ -10,20 +10,21 @@ Github profilimdeki ilk "markdown"ıma hoşgeldiniz, sefalar getirdiniz :)
 Ben Ahmet Tarık, Ankara Üniversitesi Bilgisayar Mühendisliği'nde bu yaz itibariyle 4. sınıf öğrencisiyim. Bir şeyler anlatmaya çalışacağım bu kaynak ile yaz stajımda öğrenmeye başladığım ve hala acemisi olduğum RabbitMQ hakkında öğrendiğim bilgileri pekiştirmek, benden daha acemilere yardımcı olmak, deneyimli yazılımcılar için bir tekrar kaynağı oluşturmak ve yazılım sektörüne Türkçe bir kaynak kazandırmak istiyorum. Kaynak, hatalı veya eksik bilgiler içeriyorsa lütfen benimle iletişime geçmekten çekinmeyin. Keyifli okumalar dilerim 🥳🥳🥳
 
 
-##RabbitMQ'ya Giriş:
+RabbitMQ'ya Giriş:
 
-  ###RabbitMQ nedir?
+  RabbitMQ nedir?
 
     RabbitMQ, açık kaynaklı, ücretsiz ve genişletilebilir bir mesaj komisyoncusu(message broker) veya kuyruk yöneticisi(queue manager) olarak da bilinen bir mesaj kuyruğa alma yazılımıdır(message-queueing software). Daha basite indirgemek gerekirse; kuyrukların tanımlandığı, uygulamaların mesaj veya mesajlar aktarmak için kuyruklara bağlandığı, gelişmiş mesaj kuyruklama protokolünü(AMQP(Advanced Message Queue Protocol)) benimsemiş bir yazılımdır. RabbitMQ'nun kendi internet sitesine [buradan](https://www.rabbitmq.com/) ulaşabilirsiniz.
 
-  ###Tarihçesi:
+  Tarihçesi:
   
     RabbitMQ ile ilgili derinlere inmeden önce genel kültür olarak biraz daha bilgi sahibi olmanın yararımıza olacağını düşünüyorum, ilgilenmeyenler sonraki bölüme atlayabilir... 20. yüzyılda internet ve bilgisayar bilimlerinde yaşanan hızlı gelişmeyle birlikte uzak bilgisayarlar ve servisler arasındaki veri iletişimi ve alışverişi için farklı yöntemler kullanılmaya ve çözümler üretilmeye başlandı. 2007 yılına gelindiğinde LShift ve CohesiveFT arasında bir ortak girişim olarak başlayan ve Rabbit Technologies Ltd. tarafından geliştirilen RabbitMQ, Nisan 2010'da VMware'in bir bölümü olan SpringSource tarafından satın alındı. Bu yazıyı yazdığım 12 Temmuz 2021 tarihinde en güncel sürümü olaral 3.8.19 versiyonu bulunuyor.
   
-  ###RabbitMQ ile neler Yapılabilir?
+  RabbitMQ ile neler Yapılabilir?
     
 
-##Kurulumu
+Kurulumu:
+
   Ben Debian tabanlı bir sunucuda kullanıyorum, kurulumları da öncelikle Debian'a göre anlatmaya çalışacağım. Sonrasında elimden geldiğince diğer işletim sistemleri için de eklemeler yapacağım.
   
   +RabbitMQ kurulumuna geçmeden önce güncel bir sisteme ve güncel Erlang versiyonuna sahip olmamız gerekiyor. 
