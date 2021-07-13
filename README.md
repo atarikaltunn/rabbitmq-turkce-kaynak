@@ -29,42 +29,50 @@ Ben Ahmet Tarık, Ankara Üniversitesi Bilgisayar Mühendisliği'nde bu yaz itib
   
   **RabbitMQ kurulumuna geçmeden önce güncel bir sisteme ve güncel Erlang versiyonuna sahip olmamız gerekiyor.**
   1. Bu yüzden öncelikle;
+ 
     ```
     sudo apt update
     sudo apt upgrade
     ```
   2. Sistemi güncelledikten sonra Erlang kurulumuna geçiyoruz;
+  
     ```
     wget https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_23.1.5-1~debian~stretch_amd64.deb
     sudo dpkg -i esl-erlang_23.1.5-1~debian~stretch_amd64.deb 
     ```
   3. Ardından sistem paketlerini güncelliyoruz ve Erlang'ı yüklüyoruz;
+  
     ```
     sudo apt update
     sudo apt install erlang erlang-nox
     ```  
   4. Şimdi sisteminize RabbitMQ'nun apt reposunu ekliyoruz. Ayrıca RabbitMQ kayıt anahtarını sisteminize aktarmanız gerekiyor(2. komutta yaptığımız işlem):
+    
     ```
     sudo add-apt-repository 'deb http://www.rabbitmq.com/debian/ testing main'
     wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
     ```
   5. Tamamlandığında, apt-cache'i güncelliyoruz ve sisteminize RabbitMQ sunucusunu kuruyoruz:
+    
     ```
     sudo apt update
     sudo apt install rabbitmq-server
     ```
   6. Başarılı bir şekilde kurulduktan sonra, sisteminizde RabbitMQ servisini etkinleştirmek için aşağıdaki komutları kullanın. Ayrıca RabbitMQ servisini de başlatın:
+    
     ```
     sudo systemctl enable rabbitmq-server
     sudo systemctl start rabbitmq-server
     ```
   7. Son olarak RabbitMQ'da bir kullanıcı oluşturalım. Aşağıdaki komutları kullanarak RabbitMQ sunucusunda kendi yönetici(administrator) hesabınızı oluşturabilirsiniz. Şifreyi kendi şifrenizle değiştirmeyi unutmayın:
+    
     ```
     sudo rabbitmqctl add_user <your_nick> <your_password> 
     sudo rabbitmqctl set_user_tags <your_nick> administrator
     sudo rabbitmqctl set_permissions -p / <your_nick> ".*" ".*" ".*"
     ```
   8. Kolay yönetim için isteğe bağlı olarak RabbitMQ Management Web panosunu etkinleştirebilirsiniz:
+    
     ```
     sudo rabbitmq-plugins enable rabbitmq_management
     ```
