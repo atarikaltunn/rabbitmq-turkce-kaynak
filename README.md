@@ -45,10 +45,8 @@ Ben Ahmet Tarık, Ankara Üniversitesi Bilgisayar Mühendisliği'nde bu yaz itib
     ```
   2. Sistemi güncelledikten sonra Erlang kurulumuna geçiyoruz;
   
-    ```
-    wget https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_23.1.5-1~debian~stretch_amd64.deb
-    sudo dpkg -i esl-erlang_23.1.5-1~debian~stretch_amd64.deb 
-    ```
+    ```wget https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_23.1.5-1~debian~stretch_amd64.deb
+    sudo dpkg -i esl-erlang_23.1.5-1~debian~stretch_amd64.deb```
   3. Ardından sistem paketlerini güncelliyoruz ve Erlang'ı yüklüyoruz;
   
     ```
